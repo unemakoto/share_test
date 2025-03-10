@@ -1,31 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // -----------------------------------------------------------
-  // `?kiji_id=XXX?iref=YYY` のような誤ったURLを `?kiji_id=XXX&iref=YYY` に修正
-  // -----------------------------------------------------------
-  let url = window.location.href;
-  url = url.replace(/(\?kiji_id=[^?]*)\?(iref=[^&]*)/, "$1&$2");
-  // リロードせずにURLを変更
-  window.history.replaceState(null, null, url);
-
-
-  // -----------------------------------------------------------
-  // ページアクセス時にkiji_idクエリがあったら所望の位置へ遷移（#でなく?でのアンカーリンク動作）
-  // https://wwwcdn.asahi.com/une-test/saigai/share-test/test1/?kiji_id=AST2N4GBXT2NUCVL037M
-  // -----------------------------------------------------------
-  const params = new URLSearchParams(window.location.search);
-  const kijiId = params.get("kiji_id"); // クエリの"kiji_id"の値を取得
-  if (kijiId) {
-    const targetElement = document.querySelector(`.infoWrap ul li[id='${kijiId}']`);
-    if (targetElement) {
-      // 該当セクションまで移動
-      // targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      targetElement.scrollIntoView({ block: "start" });
-
-      // // URLのハッシュを更新（履歴に残さずに変更）
-      // history.replaceState(null, null, `#${kijiId}`);
-    }
-  }
-
 
   // -----------------------------------------------------------
   // 個別シェアボタンのクリック処理
@@ -73,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // -----------------------------------------------------------
-  // 独自のシェア用の関数
+  // 独自のシェアボタン処理
   // -----------------------------------------------------------
   function tweet3(shareUrl, info_midashi) {
     // 下層ページのURL（絶対パス推奨）
-    const baseURL = "https://wwwcdn.asahi.com/une-test/saigai/share-test/test2/";
+    const baseURL = "https://unemakoto.github.io/share_test/";
     const fullURL = baseURL + shareUrl;
 
     // Twitter intent の組み立て
@@ -112,5 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     return false;
   }
+
 
 });
