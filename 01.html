@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- GTM 1of4 -->
   <!--#include virtual="/news/esi/asa_head_start.htm"-->
-  <esi:include src="/news/esi/asa_head_start.htm" onerror="continue" maxwait="2000"></esi:include>
+
   <!-- /GTM 1of4 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,20 +20,20 @@
   <meta property="og:title" content="01ページ">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.asahi.com/une-test/saigai/share-test/test2/">
-  <meta property="og:image" content="https://www.asahicom.jp/special/heisei-inori/banner/ogp_fugendake.jpg">
+  <meta property="og:image" content="https://www.asahicom.jp/special/heisei-inori/banner/ogp_okinawa.jpg">
   <meta property="og:description" content="シングルページ デザインテンプレートです。">
   <!-- twitter meta -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@asahi">
   <meta name="twitter:creator" content="The Asahi Shimbun">
-  <meta name="twitter:image" content="https://www.asahicom.jp/special/heisei-inori/banner/ogp_fugendake.jpg">
+  <meta name="twitter:image" content="https://www.asahicom.jp/special/heisei-inori/banner/ogp_okinawa.jpg">
   <meta name="RELEASE_DATE" CONTENT="2024-4-1">
   <link rel="canonical" href="https://www.asahi.com/une-test/saigai/share-test/test2/">
 
   <title>01ページ</title>
 
   <!-- プレミアムA共通CSS -->
-  <link rel="stylesheet" href="/special/singlepage/assets/singlepage/singlepage_element.css" media="screen,print">
+  <link rel="stylesheet" href="https://www.asahi.com/special/singlepage/assets/singlepage/singlepage_element.css" media="screen,print">
   <!-- /プレミアムA共通CSS -->
 
   <!-- 独自のcss,js -->
@@ -50,7 +50,7 @@
 
   <!-- GTM 2of4 -->
   <!--#include virtual="/news/esi/asa_head_end.htm"-->
-  <esi:include src="/news/esi/asa_head_end.htm" onerror="continue" maxwait="2000"></esi:include>
+
   <!-- /GTM 2of4 -->
 
 </head>
@@ -59,7 +59,7 @@
 
   <!-- GTM 3of4 -->
   <!--#include virtual="/news/esi/asa_body_start.htm"-->
-  <esi:include src="/news/esi/asa_body_start.htm" onerror="continue" maxwait="2000"></esi:include>
+
   <!-- /GTM 3of4 -->
 
   <!-- ローディングスピナ（使用しない場合は削除）-->
@@ -80,8 +80,7 @@
       <div>
         <!-- SNSボタン -->
         <!--#include virtual="/special/singlepage/assets/esi/sns_header.htm"-->
-        <esi:include src="/special/singlepage/assets/esi/sns_header.htm" onerror="continue" maxwait="2000">
-        </esi:include>
+
         <!-- /SNSボタン -->
       </div>
     </div>
@@ -234,30 +233,12 @@
   </div>
   <!-- /クレジット -->
 
-  <!-- ソーシャル -->
-  <!--#include virtual="/special/singlepage/assets/esi/sns_footer.htm"-->
-  <esi:include src="/special/singlepage/assets/esi/sns_footer.htm" onerror="continue" maxwait="2000"></esi:include>
-  <!-- /ソーシャル -->
 
-
-
-
-  <!-- ページトップボタン -->
-  <!--#include virtual="/special/singlepage/assets/esi/pagetop.htm"-->
-  <esi:include src="/special/singlepage/assets/esi/pagetop.htm" onerror="continue" maxwait="2000"></esi:include>
-  <!-- /ページトップボタン -->
-
-
-
-  <!-- フッタ -->
-  <!--#include virtual="/special/singlepage/assets/esi/footer.htm"-->
-  <esi:include src="/special/singlepage/assets/esi/footer.htm" onerror="continue" maxwait="2000"></esi:include>
-  <!-- /フッタ -->
 
 
 
   <!-- プレミアムA共通JS（すべて関数化されているので必要なものだけ呼び出す。利用は任意）-->
-  <script src="/special/singlepage/assets/singlepage/singlepage_element.js"></script>
+  <script src="https://www.asahi.com/special/singlepage/assets/singlepage/singlepage_element.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', function () { // or window.addEventListener('load'
       fnc_loader(0); //読み込み完了後ローディングスピナーがフェードアウト開始するまでのduration（引数:0 or ミリ秒を指定）
@@ -269,22 +250,7 @@
   <!-- /プレミアムA共通JS（すべて関数化されているので必要なものだけ呼び出す。利用は任意）-->
 
   <!-- ペイウォール用JS -->
-  <!-- モーダル登録画面用 displayButtonsOfPaywall()より前に設置 -->
-  <div class="modal-register">
-    <div class="modal-register__inner">
-      <div class="modal-register__holder">
-        <!-- 登録ボタン -->
-        <!--#include virtual="/special/singlepage/assets/esi/register.htm"-->
-        <esi:include src="/special/singlepage/assets/esi/register.htm" onerror="continue" maxwait="2000" />
-        <!-- /登録ボタン -->
-        <div class="modal__close-text">
-          <span onclick="close_modal_register()">閉じる</span>
-        </div>
-      </div>
-    </div>
-    <div class="modal-register__background" onclick="close_modal_register()"></div>
-  </div>
-  <!-- /モーダル登録画面用 displayButtonsOfPaywall()より前に設置 -->
+
   <!-- 使い方wiki: https://asadt.qiita.com/shared/items/bdb33cafdec2ddbed6a4 -->
   <script src="https://www.asahicom.jp/js/asahi-premium-paywall-button.js"></script>
   <script src="https://www.asahicom.jp/js/asahi-premium-redirect.js"></script>
@@ -298,12 +264,12 @@
 
   <!-- GTM 4of4 -->
   <!--#include virtual="/news/esi/asa_body_end.htm"-->
-  <esi:include src="/news/esi/asa_body_end.htm" onerror="continue" maxwait="2000"></esi:include>
+
   <!-- /GTM 4of4 -->
 
   <!-- noscript -->
   <!--#include virtual="/special/singlepage/assets/esi/noscript.htm"-->
-  <esi:include src="/special/singlepage/assets/esi/noscript.htm" onerror="continue" maxwait="2000"></esi:include>
+
   <!-- /noscript -->
 
 </body>
