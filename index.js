@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // -----------------------------------------------------------
   // ページアクセス時にkiji_idクエリがあったら所望の位置へ遷移（#でなく?でのアンカーリンク動作）
-  // https://wwwcdn.asahi.com/une-test/saigai/share-test/test1/?kiji_id=AST2N4GBXT2NUCVL037M
+  // https://unemakoto.github.io/share_test/?kiji_id=AST2N4GBXT2NUCVL037M
   // -----------------------------------------------------------
   const params = new URLSearchParams(window.location.search);
   const kijiId = params.get("kiji_id"); // クエリの"kiji_id"の値を取得
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // -----------------------------------------------------------
   function tweet3(shareUrl, info_midashi) {
     // 下層ページのURL（絶対パス推奨）
-    const baseURL = "https://wwwcdn.asahi.com/une-test/saigai/share-test/test2/";
+    const baseURL = "https://unemakoto.github.io/share_test/";
     const fullURL = baseURL + shareUrl;
 
     // Twitter intent の組み立て
